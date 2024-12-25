@@ -24,7 +24,7 @@ jobs:
         BUILD_NUMBER=${{ github.event.inputs.build }}
         #
         jq --version
-        REPO_URL="https://api.github.com/repos/ONLYOFFICE/snap-documentserver/actions/artifacts"
+        REPO_URL="https://api.github.com/repos/romandemidov/snap-documentserver/actions/artifacts"
         QUERY="curl -L $REPO_URL"
         JQ_QUERY=".artifacts | .[] | select(.name | test(\"$VERSION-$BUILD_NUMBER\"))"
         ARTIFACT_ID=`$QUERY | jq "$JQ_QUERY | .id"`
