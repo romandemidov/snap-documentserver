@@ -35,6 +35,7 @@ jobs:
           $REPO_URL/$ARTIFACT_ID/zip
         unzip package.zip
         mv *.snap package.snap
+        sha256sum ./package.snap
 
     - name: Publish snap
       uses: snapcore/action-publish@v1
