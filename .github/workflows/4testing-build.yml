@@ -41,6 +41,6 @@ jobs:
         df -h
 
     - name: Build snap
-      uses: snapcore/action-build@v1
-      id: build
-
+      run: |
+        brew install snapcraft
+        ls -la
