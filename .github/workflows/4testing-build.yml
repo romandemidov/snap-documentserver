@@ -16,7 +16,7 @@ on:
 
 jobs:
   build:
-    runs-on: macos-15
+    runs-on: ubuntu-24.04-arm
     steps:
     - name: Check out Git repository
       uses: actions/checkout@v4
@@ -41,9 +41,6 @@ jobs:
         df -h
 
     - name: Build snap
-      run: |
-        brew install snapcraft
-        #wget https://github.com/canonical/multipass/releases/download/v1.15.0/multipass-1.15.0+mac-Darwin.pkg
-        #installer -pkg ./multipass-1.15.0+mac-Darwin.pkg -target /
-        sudo brew install multipass
-        snapcraft
+      uses: snapcore/action-build@v1
+      id: build
+
