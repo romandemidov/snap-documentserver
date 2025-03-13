@@ -44,4 +44,5 @@ jobs:
       run: |
         brew install snapcraft
         wget https://github.com/canonical/multipass/releases/download/v1.15.0/multipass-1.15.0+mac-Darwin.pkg
+        brew install ./multipass-1.15.0+mac-Darwin.pkg
         snapcraft
