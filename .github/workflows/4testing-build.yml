@@ -43,4 +43,4 @@ jobs:
     - name: Build snap
       run: |
         brew install snapcraft
-        ls -la
+        snapcraft
