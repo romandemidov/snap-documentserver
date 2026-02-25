@@ -9,4 +9,4 @@ cp $SNAP/$API_JS_PATH/api.js.tpl $SNAP_DATA/$API_JS_PATH/api.js.tpl
 
 $SNAP/usr/sbin/generate-all-fonts.sh
 
-$SNAP/usr/sbin/documentserver-pluginsmanager.sh
+#$SNAP/usr/sbin/documentserver-pluginsmanager.sh
